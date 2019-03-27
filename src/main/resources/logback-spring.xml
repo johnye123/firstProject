@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="300 seconds">
+    <!--<include resource="org/springframework/boot/logging/logback/base.xml"/>-->
+    <!--↑使用该行，则控制台中有重复的日志，默认格式的日志和此处配置的日志-->
+    <!--<logger name="org.springframework.web" level="INFO"/>-->
+    <property name="log.path" value="path.log"/>
+    <springProperty scope="context" name="log.path" source="path.log"/>
+</configuration>
