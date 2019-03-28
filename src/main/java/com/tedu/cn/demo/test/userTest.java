@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
-public class UserTest {
+public class userTest {
     public SqlSessionFactory getSqlSessionFactory() throws IOException {
         // mybatis配置文件，这个地方的root地址为：resources，路径要对。
         String resource = "mybatis-config.xml";

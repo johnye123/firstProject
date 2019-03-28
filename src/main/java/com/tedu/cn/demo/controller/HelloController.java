@@ -11,7 +11,7 @@ import java.util.Date;
 
 @RestController
 public class HelloController {
-    @RequestMapping(value = "/hello",method = RequestMethod.GET)
+    @RequestMapping(value = "/hello.do",method = RequestMethod.GET)
     public String say(@RequestParam(value = "age",required = true,defaultValue = "10") Integer age){
         System.out.println("--->>>"+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
         Girl girls = new Girl();

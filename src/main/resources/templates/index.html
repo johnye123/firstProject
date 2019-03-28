@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>人员列表</title>
+    <!--引用static下的css文件-->
+    <link th:href="@{/index.css}" rel="stylesheet"></link>
+</head>
+<body>
+<!--判断人员列表是否为空-->
+<table th:unless="${#lists.isEmpty(personList)}">
+    <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th>毕业学校</th>
+    </tr>
+    <!--循环遍历人员列表-->
+    <tr th:each="person : ${personList}">
+        <td th:text="${person.id}"></td>
+        <td th:text="${person.username}"></td>
+        <td th:text="${person.password}"></td>
+        <td th:text="${person.email}"></td>
+    </tr>
+</table>
+<div class="msg" th:if="${#lists.isEmpty(personList)}">暂时没有人员信息！</div>
+<form method="POST" action="/person/add">
+    <input name="id" id="id" type="text" placeholder="编号"/><br/>
+    <input name="username" id="username" type="text" placeholder="姓名"/><br/>
+    <input name="password" id="password" type="text" placeholder="密码"/><br/>
+    <input name="email" id="email" type="text" placeholder="邮箱"/><br/>
+    <input type="submit" value="新增+"/>
+</form>
+</body>
+</html>

@@ -1,6 +1,6 @@
 server:
   servlet:
-    context-path: /boy
+    context-path: /test
   port: 8082
   path:
     log: D:/logs-reptile-test

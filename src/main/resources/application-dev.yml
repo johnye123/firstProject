@@ -1,7 +1,5 @@
 server:
   servlet:
-    context-path: /boy
+    context-path: /dev
   port: 8081
-  path:
-    log: D:/logs-reptile-dev
 

@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.tedu.cn.demo.mapper.user">
+<mapper namespace="com.tedu.cn.demo.mapper.UserMapper">
     <!-- 在映射文件中配置很多sql语句 -->
     <!-- 将sql语句封装到mappedStatement对象中，所以将id称为statement的id -->
     <!-- parameterType：指定输入参数的类型，这里指定int型 #{}表示一个占位符号 -->
